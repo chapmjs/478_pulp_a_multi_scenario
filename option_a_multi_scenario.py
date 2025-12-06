@@ -213,17 +213,17 @@ for idx, (scenario_id, result) in enumerate(results.items()):
             <div style="background-color: #dbeafe; padding: 15px; border-radius: 8px; margin: 10px 0;">
                 <h4 style="margin: 0; color: #1e40af;">Throughput: ${result['total_throughput']:,.2f}</h4>
             </div>
-            <div style="background-color: #f0fdf4; padding: 10px; border-radius: 8px; margin: 5px 0;">
-                <strong>Product A:</strong> {result['product_a']:.1f} units<br>
-                <small>Contribution: ${result['product_a'] * st.session_state.scenarios[scenario_id]['profit_a']:,.2f}</small>
+            <div style="background-color: #f0fdf4; padding: 10px; border-radius: 8px; margin: 5px 0; color: #15803d;">
+                <strong style="color: #15803d;">Product A:</strong> {result['product_a']:.1f} units<br>
+                <small style="color: #166534;">Contribution: ${result['product_a'] * st.session_state.scenarios[scenario_id]['profit_a']:,.2f}</small>
             </div>
-            <div style="background-color: #fef3c7; padding: 10px; border-radius: 8px; margin: 5px 0;">
-                <strong>Product B:</strong> {result['product_b']:.1f} units<br>
-                <small>Contribution: ${result['product_b'] * st.session_state.scenarios[scenario_id]['profit_b']:,.2f}</small>
+            <div style="background-color: #fef3c7; padding: 10px; border-radius: 8px; margin: 5px 0; color: #92400e;">
+                <strong style="color: #92400e;">Product B:</strong> {result['product_b']:.1f} units<br>
+                <small style="color: #78350f;">Contribution: ${result['product_b'] * st.session_state.scenarios[scenario_id]['profit_b']:,.2f}</small>
             </div>
-            <div style="background-color: #fee2e2; padding: 10px; border-radius: 8px; margin: 5px 0;">
-                <strong>Bottleneck:</strong> {result['bottleneck']}<br>
-                <small>HT Utilization: {result['heat_treatment_utilization']:.1f}%</small>
+            <div style="background-color: #fee2e2; padding: 10px; border-radius: 8px; margin: 5px 0; color: #991b1b;">
+                <strong style="color: #991b1b;">Bottleneck:</strong> {result['bottleneck']}<br>
+                <small style="color: #7f1d1d;">HT Utilization: {result['heat_treatment_utilization']:.1f}%</small>
             </div>
         </div>
         """, unsafe_allow_html=True)
